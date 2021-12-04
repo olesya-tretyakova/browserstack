@@ -52,7 +52,7 @@ public class BrowserStackAndroidSampleTests {
         Thread.sleep(5000);
         List<AndroidElement> allProductsName = driver.findElementsByClassName(
                 "android.widget.TextView");
-        assert(allProductsName.size() > 0);
+        assert (allProductsName.size() > 0);
 
 
         // Invoke driver.quit() after the test is done to indicate that the test is completed.

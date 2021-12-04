@@ -3,7 +3,6 @@ package tests;
 import io.appium.java_client.MobileBy;
 import io.appium.java_client.ios.IOSDriver;
 import io.appium.java_client.ios.IOSElement;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -12,8 +11,8 @@ import java.net.MalformedURLException;
 import java.net.URL;
 
 public class BrowserStackIosSampleTests {
-   // @Test
-    void searchTest() throws MalformedURLException, InterruptedException{
+    // @Test
+    void searchTest() throws MalformedURLException, InterruptedException {
         DesiredCapabilities caps = new DesiredCapabilities();
 
         // Set your access credentials
@@ -50,10 +49,10 @@ public class BrowserStackIosSampleTests {
         Thread.sleep(5000);
         IOSElement textOutput = (IOSElement) new WebDriverWait(driver, 30).until(
                 ExpectedConditions.elementToBeClickable(MobileBy.AccessibilityId("Text Output")));
-        if(textOutput != null && textOutput.getText().equals("hello@browserstack.com"))
-            assert(true);
+        if (textOutput != null && textOutput.getText().equals("hello@browserstack.com"))
+            assert (true);
         else
-            assert(false);
+            assert (false);
 
         // Invoke driver.quit() after the test is done to indicate that the test is completed.
         driver.quit();

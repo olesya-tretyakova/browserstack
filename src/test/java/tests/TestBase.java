@@ -24,12 +24,12 @@ public class TestBase {
     }
 
     @BeforeEach
-    public void startDriver(){
+    public void startDriver() {
         open();
     }
 
     @AfterEach
-    public void afterEach(){
+    public void afterEach() {
         String sessionId = getSessionId();
         Attach.screenshotAs("Last screenshot");
         Attach.pageSource();
